@@ -1,0 +1,43 @@
+/*This is a comment*/
+
+body {
+    background:#EEEEEE;
+    margin:20px;
+    font-size:100%; /* hack for old browsers */
+}
+
+h1 {
+    text-align:center;
+}
+
+.taxNode {
+    padding-left:30px;
+}
+
+.taxString {
+    font-weight:normal;
+}
+
+.taxCount {
+    position:absolute;
+    left:0px;
+}
+
+.taxSearch {
+    display:inline-block;
+}
+
+.taxSearch input {
+    border:none;
+    padding:0;
+}
+
+.taxSearch button {
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+.highlight {
+    background-color:#FFFF88;
+}
