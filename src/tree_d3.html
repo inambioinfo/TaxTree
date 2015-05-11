@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<meta charset="utf-8">
+<html>
+   <head>
 <style>
 
 .node {
@@ -23,45 +24,13 @@
 }
 
 </style>
+</head>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-<script src="gg_12_10_taxonomy_d3.js"></script>
 <script>
-//var rawJSONobj = JSON.parse(rawTree);
-//var newJSONobj = {}
-//
-//var count = function(node){
-//	var counter = 0;
-//	for (var key in node) {
-//		counter++;
-//	}
-//	return counter;
-//}
-//
-//alert(rawJSONobj);
-//var reparse = function(rawNode, name){
-//	if(count(rawNode)>0){
-//		document.write('{"name": "'+name+'",');
-//			document.write('"children": [');
-//
-//			for (var key in rawNode) {
-//				reparse(rawNode[key], key)
-//				document.write(',');
-//			}
-//			document.write(']');
-//			document.write('}');
-//	}else{
-//		document.write('{"name": "'+name+'"}');
-//		}
-//	}
-//
-//	for (var key in rawJSONobj) {
-//		reparse(rawJSONobj[key], key)
-//	}
 
-
-var margin = {top: 20, right: 120, bottom: 20, left: 120},
-	width = 960 - margin.right - margin.left,
+var margin = {top: 20, right: 20, bottom: 20, left: 20},
+	width = 1600 - margin.right - margin.left,
 	height = 800 - margin.top - margin.bottom;
 
 var i = 0,
@@ -80,7 +49,7 @@ var diagonal = d3.svg.diagonal()
 	.append("g")
 	.attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-	d3.json("gg_12_10_taxonomy.json", function(error, flare) {
+	d3.json("gg_12_10_taxonomy_d3.json", function(error, flare) {
 			root = flare;
 			root.x0 = height / 2;
 			root.y0 = 0;
@@ -199,3 +168,5 @@ function click(d) {
 }
 
 </script>
+</body>
+</html>
